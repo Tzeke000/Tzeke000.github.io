@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tzeke000 Studios - Music</title>
+    <link rel="icon" href="Tzeke000icon.jpg" type="image/jpeg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff0000, #0000ff);
+            color: #fff;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+        .social-links a {
+            color: #fff;
+            margin-left: 10px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #ddd;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            background-color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a.music-tab {
+            background: linear-gradient(to right, #ff0000, #0000ff);
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            header, nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav a {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 10px;
+            }
+            .social-links {
+                margin-top: 10px;
+                width: 100%;
+                justify-content: center;
+            }
+            .container {
+                padding: 15px;
+            }
+            nav a {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tzeke000 Studios</h1>
+    <div class="social-links">
+        <a href="https://twitter.com/tzeke000" target="_blank">Twitter</a>
+        <a href="https://spotify.com/tzeke000" target="_blank">Spotify</a>
+        <a href="https://youtube.com/tzeke000" target="_blank">YouTube</a>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="bio.html">Biography</a>
+    <a href="music.html" class="music-tab">Music</a>
+    <a href="social.html">Social</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <h2>Tzeke000's Spotify</h2>
+    <iframe src="https://open.spotify.com/embed/artist/3OGoSdHCFrG0wLdROotkfY" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+    <h2>Tzeke000's Apple Music</h2>
+    <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/artist/tzeke000/1496483739"></iframe>
+
+    <h2>Tzeke000's YouTube Music</h2>
+    <div class='sk-ww-youtube-channel-videos' data-embed-id='25467290'></div>
+    <script src='https://widgets.sociablekit.com/youtube-channel-videos/widget.js' async defer></script>
+
+    <h2>Tzeke000's Amazon Music</h2>
+    <p>
+        Listen to Tzeke000 on <a href="https://www.amazon.com/music/player/artists/B0847TNFV1/tzeke000" target="_blank" style="color: #fff; text-decoration: underline;">Amazon Music</a>.
+    </p>
+</div>
+
+<footer>
+    <p>&copy; 2023 Tzeke000 Studios - All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
+
+

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tzeke000 Studios - Home</title>
+    <meta name="description" content="Welcome to Tzeke000 Studios. Explore music, videos, and stay updated with the latest news!">
+    <meta name="keywords" content="Tzeke000, music, videos, studio, news, entertainment">
+    <link rel="icon" href="Tzeke000icon.jpg" type="image/jpeg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff0000, #0000ff);
+            color: #fff;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+        .social-links a {
+            color: #fff;
+            margin-left: 10px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #ddd;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            background-color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a.music-tab {
+            background: linear-gradient(to right, #ff0000, #0000ff);
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .hero {
+            background-image: url('hero-image.jpg');
+            height: 400px;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            padding: 20px;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        .hero h2 {
+            font-size: 36px;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+        }
+        .cta-buttons {
+            margin-top: 20px;
+            z-index: 2;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .cta-buttons a {
+            background-color: #ff9900;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .cta-buttons a:hover {
+            background-color: #e68a00;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+        h2 {
+            text-align: center;
+        }
+        .video-gallery {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .video-gallery video {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .featured-songs {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .featured-songs audio {
+            width: 100%;
+            outline: none;
+            margin-top: 10px;
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .newsletter {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .newsletter input[type="email"] {
+            padding: 10px;
+            width: 70%;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            color: #000;
+            max-width: 300px;
+        }
+        .newsletter button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff9900;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .newsletter button:hover {
+            background-color: #e68a00;
+        }
+        .gif {
+            display: block;
+            margin: 10px auto;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 28px;
+            }
+            nav a {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+            .cta-buttons a {
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 24px;
+            }
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .social-links {
+                margin-top: 10px;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .newsletter input[type="email"] {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tzeke000 Studios</h1>
+    <div class="social-links">
+        <a href="https://twitter.com/tzeke000" target="_blank">Twitter</a>
+        <a href="https://spotify.com/tzeke000" target="_blank">Spotify</a>
+        <a href="https://youtube.com/tzeke000" target="_blank">YouTube</a>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="bio.html">Biography</a>
+    <a href="music.html" class="music-tab">Music</a>
+    <a href="social.html">Social</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="hero">
+    <h2>Welcome to Tzeke000 Studios</h2>
+    <div class="cta-buttons">
+        <a href="music.html">Listen Now!</a>
+        <a href="social.html">Follow!</a>
+    </div>
+</div>
+
+<img src="homegif/tzeke000g.gif" alt="GIF Description" class="gif">
+
+<div class="container">
+    <h2>Tzeke000's Spotify</h2>
+    <iframe src="https://open.spotify.com/embed/artist/3OGoSdHCFrG0wLdROotkfY" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+    <img src="homegif/mv.gif" alt="GIF Description" class="gif">
+
+    <h2>Tzeke000's YouTube Channel</h2>
+    <div class='sk-ww-youtube-channel-videos' data-embed-id='25467249'></div>
+    <script src='https://widgets.sociablekit.com/youtube-channel-videos/widget.js' async defer></script>
+
+    <h2>Videos</h2>
+    <div class="video-gallery">
+        <video controls id="video1" preload="metadata">
+            <source src="chasing you video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls id="video2" preload="metadata">
+            <source src="heart.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls id="video3" preload="metadata">
+            <source src="our love yuno edit.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <h2>Featured Songs</h2>
+    <div class="featured-songs">
+        <audio controls id="chasingyou">
+            <source src="audio/chasingyou.wav" type="audio/wav">
+            Your browser does not support the audio tag.
+        </audio>
+        <audio controls id="momentIsawyou">
+            <source src="audio/momentIsawyou.wav" type="audio/wav">
+            Your browser does not support the audio tag.
+        </audio>
+        <audio controls id="pedaltothemedal">
+            <source src="audio/pedaltothemedal.wav" type="audio/wav">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+
+    <img src="homegif/note.gif" alt="GIF Description" class="gif">
+</div>
+
+<div class="newsletter">
+    <h2>Subscribe to The Newsletter</h2>
+    <p>Stay updated with the latest news and releases from Tzeke000!</p>
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <button id="subscribe-button">Subscribe</button>
+</div>
+
+<div class="footer">
+    <p>&copy; 2023 Tzeke000 Studios - All Rights Reserved</p>
+</div>
+
+<audio id="click-sound" src="click.mp3" preload="auto"></audio>
+
+<script>
+    const likeStatus = {};
+    const clickSound = document.getElementById('click-sound');
+
+    document.addEventListener('click', () => {
+        clickSound.currentTime = 0; // Reset the sound to the start
+        clickSound.play();
+    });
+
+    document.getElementById('subscribe-button').addEventListener('click', () => {
+        const emailInput = document.getElementById('email');
+        const email = emailInput.value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email regex
+
+        if (emailPattern.test(email)) {
+            alert('Thank you for subscribing!');
+            emailInput.value = ''; // Clear the input
+        } else {
+            alert('Please enter a valid email address.');
+        }
+    });
+
+    function toggleLike(postId) {
+        if (!likeStatus[postId]) {
+            likeStatus[postId] = true;
+            const likeCountElement = document.getElementById(`like-count-${postId}`);
+            likeCountElement.textContent = parseInt(likeCountElement.textContent) + 1;
+        }
+    }
+
+    function addComment(postId) {
+        const commentBox = document.getElementById(`comment-box-${postId}`);
+        const commentText = commentBox.querySelector('textarea').value;
+        if (commentText) {
+            const commentsDiv = document.getElementById(`comments-${postId}`);
+            const commentElement = document.createElement('div');
+            commentElement.className = 'comment';
+            commentElement.textContent = commentText;
+            commentsDiv.appendChild(commentElement);
+            commentBox.querySelector('textarea').value = ''; // Clear the textarea
+        }
+    }
+
+    function sharePost(postId) {
+        const postMessage = `Post ${postId} - Check this out!`;
+        navigator.clipboard.writeText(postMessage).then(() => {
+            alert('Post message copied to clipboard!');
+        }, () => {
+            alert('Failed to copy post message to clipboard.');
+        });
+    }
+</script>
+
+</body>
+</html>

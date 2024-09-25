@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tzeke000 Studios - Contact</title>
+    <link rel="icon" href="Tzeke000icon.jpg" type="image/jpeg">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background: linear-gradient(to right, #ff0000, #0000ff);
+            animation: gradient-spin 20s linear infinite;
+            font-family: Arial, sans-serif; /* Ensure same font style as Index.html */
+        }
+
+        @keyframes gradient-spin {
+            0% {
+                background: linear-gradient(to right, #ff0000, #0000ff);
+            }
+            50% {
+                background: linear-gradient(to left, #ff0000, #0000ff);
+            }
+            100% {
+                background: linear-gradient(to right, #ff0000, #0000ff);
+            }
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            background-color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a.music-tab {
+            background: linear-gradient(to right, #ff0000, #0000ff);
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            flex: 1;
+            width: 90%;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+        }
+
+        .contact-info {
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header, nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav a {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            nav a {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tzeke000 Studios</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="bio.html">Biography</a>
+    <a href="music.html" class="music-tab">Music</a>
+    <a href="social.html">Social</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <h2>Contact Tzeke000</h2>
+    <p class="contact-info">Feel free to reach out to Tzeke000 at: <a href="mailto:Tzeke000@gmail.com" style="color: #fff; text-decoration: none;">Tzeke000@gmail.com</a></p>
+</div>
+
+<footer>
+    <p>&copy; 2023 Tzeke000 Studios - All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
+
+
