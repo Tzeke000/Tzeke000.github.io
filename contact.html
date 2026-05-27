@@ -3,152 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tzeke000 Studios - Contact</title>
+    <title>Tzeke000 Studios — Contact</title>
+    <meta name="description" content="Get in touch with Tzeke000 for bookings, collaborations and more.">
     <link rel="icon" href="Tzeke000icon.jpg" type="image/jpeg">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            color: #fff;
-            background: linear-gradient(to right, #ff0000, #0000ff);
-            animation: gradient-spin 20s linear infinite;
-            font-family: Arial, sans-serif; /* Ensure same font style as Index.html */
-        }
-
-        @keyframes gradient-spin {
-            0% {
-                background: linear-gradient(to right, #ff0000, #0000ff);
-            }
-            50% {
-                background: linear-gradient(to left, #ff0000, #0000ff);
-            }
-            100% {
-                background: linear-gradient(to right, #ff0000, #0000ff);
-            }
-        }
-
-        header {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-            text-transform: uppercase;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-        }
-
-        nav a {
-            color: #fff;
-            padding: 10px 20px;
-            margin: 5px;
-            text-decoration: none;
-            background-color: #333;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a.music-tab {
-            background: linear-gradient(to right, #ff0000, #0000ff);
-        }
-
-        nav a:hover {
-            background-color: #555;
-        }
-
-        .container {
-            flex: 1;
-            width: 90%;
-            margin: 0 auto;
-            overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            box-sizing: border-box;
-        }
-
-        .contact-info {
-            font-size: 18px;
-        }
-
-        footer {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            width: 100%;
-        }
-
-        @media (max-width: 768px) {
-            header, nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav a {
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-            .container {
-                padding: 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 10px;
-            }
-            .container {
-                padding: 15px;
-            }
-            nav a {
-                padding: 8px 12px;
-                font-size: 12px;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-    <h1>Tzeke000 Studios</h1>
+<header class="site-header">
+    <a class="brand" href="index.html">
+        <img src="Tzeke000icon.jpg" alt="Tzeke000 logo">
+        Tzeke000
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bio.html">Biography</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="social.html">Social</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
 </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="bio.html">Biography</a>
-    <a href="music.html" class="music-tab">Music</a>
-    <a href="social.html">Social</a>
-    <a href="contact.html">Contact</a>
-</nav>
+<section class="section">
+    <div class="section-head">
+        <span class="eyebrow">Say Hello</span>
+        <h2>Contact <span class="gradient-text">Tzeke000</span></h2>
+        <p>Bookings, collaborations or just to chat — reach out anytime.</p>
+    </div>
 
-<div class="container">
-    <h2>Contact Tzeke000</h2>
-    <p class="contact-info">Feel free to reach out to Tzeke000 at: <a href="mailto:Tzeke000@gmail.com" style="color: #fff; text-decoration: none;">Tzeke000@gmail.com</a></p>
-</div>
+    <div class="card" style="text-align:center">
+        <p style="font-size:1.1rem;margin:0 0 20px">Drop a line at:</p>
+        <a class="btn btn-primary" href="mailto:Tzeke000@gmail.com">Tzeke000@gmail.com</a>
+        <div class="social-grid" style="margin-top:30px;margin-bottom:0">
+            <a href="https://www.instagram.com/tzeke000/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://twitter.com/tzeke0001" target="_blank" rel="noopener">Twitter / X</a>
+            <a href="https://www.youtube.com/@tzeke000" target="_blank" rel="noopener">YouTube</a>
+        </div>
+    </div>
+</section>
 
-<footer>
-    <p>&copy; 2023 Tzeke000 Studios - All Rights Reserved</p>
+<footer class="site-footer">
+    <div class="footer-social">
+        <a href="https://open.spotify.com/artist/3OGoSdHCFrG0wLdROotkfY" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://youtube.com/@tzeke000" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/tzeke000/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@tzeke000" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://twitter.com/tzeke0001" target="_blank" rel="noopener">Twitter / X</a>
+    </div>
+    <small>&copy; <span data-year>2026</span> Tzeke000 Studios — All Rights Reserved</small>
 </footer>
 
+<script src="main.js"></script>
 </body>
 </html>
-
-
