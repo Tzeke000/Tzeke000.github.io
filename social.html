@@ -3,190 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tzeke000 Studios - Social</title>
+    <title>Tzeke000 Studios — Social</title>
+    <meta name="description" content="Connect with Tzeke000 on Twitter/X, Instagram, YouTube, TikTok and Discord.">
     <link rel="icon" href="Tzeke000icon.jpg" type="image/jpeg">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #ff0000, #0000ff);
-            color: #fff;
-        }
-        header {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-            text-transform: uppercase;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-        }
-        nav a {
-            color: #fff;
-            padding: 10px 20px;
-            margin: 5px;
-            text-decoration: none;
-            background-color: #333;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        nav a.music-tab {
-            background: linear-gradient(to right, #ff0000, #0000ff);
-        }
-        nav a:hover {
-            background-color: #555;
-        }
-        .container {
-            width: 90%;
-            margin: auto;
-            overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            box-sizing: border-box;
-        }
-        .social-platform {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .social-platform a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 20px;
-            display: inline-block;
-            margin: 10px 0;
-            padding: 10px 20px;
-            background-color: #333;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .social-platform a:hover {
-            background-color: #555;
-        }
-        footer {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            width: 100%;
-            position: relative;
-            bottom: 0;
-        }
-        .gif {
-            width: 50px;
-            vertical-align: middle;
-            margin-left: 10px;
-        }
-
-        @media (max-width: 768px) {
-            header, nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav a {
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-            .social-platform a {
-                font-size: 18px;
-                padding: 8px 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 10px;
-            }
-            .container {
-                padding: 15px;
-            }
-            .social-platform a {
-                font-size: 16px;
-                padding: 6px 12px;
-            }
-            .social-platform iframe {
-                width: 100%;
-                height: auto;
-            }
-            nav a {
-                padding: 8px 12px;
-                font-size: 12px;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-    <h1>Tzeke000 Studios</h1>
+<header class="site-header">
+    <a class="brand" href="index.html">
+        <img src="Tzeke000icon.jpg" alt="Tzeke000 logo">
+        Tzeke000
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bio.html">Biography</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="social.html">Social</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
 </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="bio.html">Biography</a>
-    <a href="music.html" class="music-tab">Music</a>
-    <a href="social.html">Social</a>
-    <a href="contact.html">Contact</a>
-</nav>
+<section class="section">
+    <div class="section-head">
+        <span class="eyebrow">Stay Connected</span>
+        <h2>Connect with Tzeke000</h2>
+        <p>Follow along and join the community.</p>
+    </div>
 
-<div class="container">
-    <h2>Connect with Tzeke000 <img src="roach.gif" alt="Roach GIF" class="gif"></h2>
+    <div class="social-grid">
+        <a href="https://twitter.com/tzeke0001" target="_blank" rel="noopener">Twitter / X</a>
+        <a href="https://www.instagram.com/tzeke000/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@tzeke000" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.tiktok.com/@tzeke000" target="_blank" rel="noopener">TikTok</a>
+    </div>
 
-    <div class="social-platform">
-        <h3>Twitter</h3>
-        <a href="https://twitter.com/tzeke0001" target="_blank">Visit Twitter</a>
+    <div class="card">
+        <h3>Twitter / X</h3>
         <div class='sk-ww-twitter-feed' data-embed-id='25467274'></div>
         <script src='https://widgets.sociablekit.com/twitter-feed/widget.js' async defer></script>
     </div>
 
-    <div class="social-platform">
-        <h3>Instagram</h3>
-        <a href="https://www.instagram.com/tzeke000/" target="_blank">Visit Instagram</a>
-    </div>
-
-    <div class="social-platform">
+    <div class="card">
         <h3>YouTube</h3>
-        <a href="https://www.youtube.com/@tzeke000" target="_blank">Visit YouTube Channel</a>
         <div class='sk-ww-youtube-channel-videos' data-embed-id='25467249'></div>
         <script src='https://widgets.sociablekit.com/youtube-channel-videos/widget.js' async defer></script>
     </div>
 
-    <div class="social-platform">
+    <div class="card">
         <h3>TikTok</h3>
         <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tzeke000/video/7344422867452398879" data-video-id="7344422867452398879" data-embed-from="embed_page" style="max-width:100%;">
             <section>
-                <a target="_blank" title="@tzeke000" href="https://www.tiktok.com/@tzeke000?refer=embed">@tzeke000</a>
-                <p>Little music edit full song on spotify <a title="lovesong" target="_blank" href="https://www.tiktok.com/tag/lovesong?refer=embed">#lovesong</a> <a title="spotify" target="_blank" href="https://www.tiktok.com/tag/spotify?refer=embed">#spotify</a> @marshmello</p>
-                <a target="_blank" title="♬ One more on Spotify - tzeke000" href="https://www.tiktok.com/music/One-more-on-Spotify-7344422910427843358?refer=embed">♬ One more on Spotify - tzeke000</a>
+                <a target="_blank" rel="noopener" title="@tzeke000" href="https://www.tiktok.com/@tzeke000?refer=embed">@tzeke000</a>
+                <p>Little music edit — full song on Spotify
+                    <a title="lovesong" target="_blank" rel="noopener" href="https://www.tiktok.com/tag/lovesong?refer=embed">#lovesong</a>
+                    <a title="spotify" target="_blank" rel="noopener" href="https://www.tiktok.com/tag/spotify?refer=embed">#spotify</a>
+                </p>
+                <a target="_blank" rel="noopener" title="♬ One more on Spotify - tzeke000" href="https://www.tiktok.com/music/One-more-on-Spotify-7344422910427843358?refer=embed">♬ One more on Spotify - tzeke000</a>
             </section>
         </blockquote>
         <script async src="https://www.tiktok.com/embed.js"></script>
     </div>
 
-    <div class="social-platform">
+    <div class="card">
         <h3>Discord</h3>
-        <iframe src="https://discord.com/widget?id=601618775347036180&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        <iframe class="embed-frame" title="Tzeke000 Discord" style="height:400px"
+            src="https://discord.com/widget?id=601618775347036180&theme=dark"
+            allowtransparency="true"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            loading="lazy"></iframe>
     </div>
 
-</div>
+    <img src="roach.gif" alt="" class="gif-accent" aria-hidden="true">
+</section>
 
-<footer>
-    <p>&copy; 2023 Tzeke000 Studios - All Rights Reserved</p>
+<footer class="site-footer">
+    <div class="footer-social">
+        <a href="https://open.spotify.com/artist/3OGoSdHCFrG0wLdROotkfY" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://youtube.com/@tzeke000" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/tzeke000/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@tzeke000" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://twitter.com/tzeke0001" target="_blank" rel="noopener">Twitter / X</a>
+    </div>
+    <small>&copy; <span data-year>2026</span> Tzeke000 Studios — All Rights Reserved</small>
 </footer>
 
+<script src="main.js"></script>
 </body>
 </html>
-
