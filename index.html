@@ -14,6 +14,8 @@
 </head>
 <body>
 
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
 <header class="site-header">
     <a class="brand" href="index.html">
         <img src="Tzeke000icon.jpg" alt="Tzeke000 logo">
@@ -33,6 +35,7 @@
 
 <section class="hero">
     <div class="hero-bg" role="presentation"></div>
+    <canvas id="hero-particles" aria-hidden="true"></canvas>
     <span class="eyebrow">Future Bass · EDM · Pop</span>
     <h1>Tzeke000 <span class="gradient-text">Studios</span></h1>
     <p>New sounds, videos and releases — all in one place. Plug in and press play.</p>
@@ -42,7 +45,22 @@
     </div>
 </section>
 
-<section class="section">
+<div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+        <span class="hot">New Release</span><span>·</span>
+        <span>Out Now</span><span>·</span>
+        <span class="hot">Stream Everywhere</span><span>·</span>
+        <span>Future Bass</span><span>·</span>
+        <span class="hot">Tzeke000</span><span>·</span>
+        <span class="hot">New Release</span><span>·</span>
+        <span>Out Now</span><span>·</span>
+        <span class="hot">Stream Everywhere</span><span>·</span>
+        <span>Future Bass</span><span>·</span>
+        <span class="hot">Tzeke000</span><span>·</span>
+    </div>
+</div>
+
+<section class="section reveal">
     <div class="section-head">
         <span class="eyebrow">New Release</span>
         <h2>Latest Release</h2>
@@ -55,7 +73,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section reveal">
     <div class="section-head">
         <span class="eyebrow">Stream</span>
         <h2>More on Spotify</h2>
@@ -69,7 +87,7 @@
     <img src="homegif/mv.gif" alt="" class="gif-accent" aria-hidden="true">
 </section>
 
-<section class="section">
+<section class="section reveal">
     <div class="section-head">
         <span class="eyebrow">Watch</span>
         <h2>Music Videos</h2>
@@ -92,7 +110,7 @@
     <img src="homegif/note.gif" alt="" class="gif-accent" aria-hidden="true">
 </section>
 
-<section class="section">
+<section class="section reveal">
     <div class="section-head">
         <span class="eyebrow">YouTube</span>
         <h2>From the Channel</h2>
@@ -108,7 +126,7 @@
     </div>
 </section>
 
-<section class="section newsletter">
+<section class="section newsletter reveal">
     <div class="card" style="text-align:center">
         <h2>Join the Newsletter</h2>
         <p>Be the first to hear about new releases and shows.</p>
