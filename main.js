@@ -36,16 +36,30 @@
   /* ---- Newsletter (only present on home) ---- */
   var form = document.getElementById("newsletter-form");
   if (form) {
+    var GFORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSewR9uuV6dV6svyKn5MhATST9_1nnW5K1ldcTV8CpwNS8G2VA/formResponse";
+    var GFORM_EMAIL_FIELD = "entry.1314273606";
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var input = document.getElementById("newsletter-email");
-      var ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
-      if (ok) {
-        alert("Thanks for subscribing!");
-        input.value = "";
-      } else {
+      var btn = form.querySelector("button[type='submit']");
+      var email = input.value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         alert("Please enter a valid email address.");
+        return;
       }
+      btn.disabled = true;
+      var data = new FormData();
+      data.append(GFORM_EMAIL_FIELD, email);
+      fetch(GFORM_ACTION, { method: "POST", mode: "no-cors", body: data })
+        .then(function () {
+          input.value = "";
+          alert("Thanks for subscribing!");
+        })
+        .catch(function () {
+          alert("Subscription failed — please check your connection and try again.");
+        })
+        .finally(function () { btn.disabled = false; });
     });
   }
 
