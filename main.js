@@ -39,13 +39,21 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var input = document.getElementById("newsletter-email");
-      var ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
-      if (ok) {
-        alert("Thanks for subscribing!");
-        input.value = "";
-      } else {
+      var email = input.value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         alert("Please enter a valid email address.");
+        return;
       }
+      var subject = "Newsletter — Subscribe";
+      var body = "Hi Tzeke000, please add me to your newsletter.\n\nEmail: " + email;
+      var href = "mailto:Tzeke000@gmail.com"
+        + "?subject=" + encodeURIComponent(subject)
+        + "&body=" + encodeURIComponent(body);
+      window.location.href = href;
+      input.value = "";
+      setTimeout(function () {
+        alert("Almost done — tap Send in your email app to confirm your subscription.");
+      }, 600);
     });
   }
 
