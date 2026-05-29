@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://tzeke000.github.io/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://tzeke000.github.io/music.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://tzeke000.github.io/discography.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://tzeke000.github.io/listen.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://tzeke000.github.io/bio.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://tzeke000.github.io/epk.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://tzeke000.github.io/social.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://tzeke000.github.io/contact.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+</urlset>

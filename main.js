@@ -95,6 +95,91 @@
 })();
 
 /* ===========================================================
+   Extras: PWA register, Discord live count, audio toggle,
+   listen-now device suggestion
+   =========================================================== */
+(function () {
+  "use strict";
+
+  /* ---- Service worker (PWA) ---- */
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("/sw.js").catch(function () { /* swallow */ });
+    });
+  }
+
+  /* ---- Discord live count ---- */
+  var discord = document.querySelector("[data-discord-widget]");
+  if (discord && "fetch" in window) {
+    var guildId = discord.getAttribute("data-discord-widget");
+    fetch("https://discord.com/api/guilds/" + guildId + "/widget.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (!data) return;
+        var presence = (data.presence_count || 0) + " online";
+        var members  = (data.members ? data.members.length : 0);
+        discord.innerHTML = "<strong>" + (data.name || "Discord") + "</strong>"
+          + "<span style=\"color:var(--muted);margin-left:8px\">" + presence
+          + (members ? " · " + members + " in widget" : "") + "</span>";
+      })
+      .catch(function () { /* widget may be disabled */ });
+  }
+
+  /* ---- Listen-now device suggestion ---- */
+  var platforms = document.querySelector("[data-listen-platforms]");
+  if (platforms) {
+    var ua = navigator.userAgent || "";
+    var suggest = "spotify";
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) suggest = "apple";
+    else if (/Android/i.test(ua) && /YouTubeMusic|com\.google\.android\.apps\.youtube\.music/i.test(ua)) suggest = "youtube-music";
+    var el = platforms.querySelector('[data-platform="' + suggest + '"]');
+    if (el) {
+      el.setAttribute("data-suggested", "1");
+      platforms.insertBefore(el, platforms.firstChild);
+    }
+  }
+
+  /* ---- Audio toggle (optional ambient site bed) ---- */
+  var toggle = document.querySelector("[data-audio-toggle]");
+  if (toggle) {
+    var audio = new Audio(toggle.getAttribute("data-audio-src") || "/audio/site-loop.mp3");
+    audio.loop = true;
+    audio.preload = "none";
+    audio.volume = 0.25;
+    var stored = null;
+    try { stored = localStorage.getItem("tzeke-audio"); } catch (e) {}
+
+    function setLabel(on) {
+      toggle.setAttribute("aria-pressed", on ? "true" : "false");
+      toggle.setAttribute("aria-label", on ? "Mute site music" : "Play site music");
+      toggle.dataset.on = on ? "1" : "0";
+    }
+    setLabel(false);
+
+    toggle.addEventListener("click", function () {
+      if (audio.paused) {
+        var p = audio.play();
+        if (p && p.catch) p.catch(function () { /* autoplay blocked etc. */ });
+        setLabel(true);
+        try { localStorage.setItem("tzeke-audio", "on"); } catch (e) {}
+      } else {
+        audio.pause();
+        setLabel(false);
+        try { localStorage.setItem("tzeke-audio", "off"); } catch (e) {}
+      }
+    });
+
+    // Restore last choice on internal navigation if user explicitly enabled it
+    if (stored === "on") {
+      document.addEventListener("click", function once() {
+        document.removeEventListener("click", once, true);
+        toggle.click();
+      }, { capture: true, once: true });
+    }
+  }
+})();
+
+/* ===========================================================
    Visual layer: scroll reveal, canvas backgrounds, parallax
    =========================================================== */
 (function () {

@@ -547,3 +547,25 @@ audio { width: 100%; height: 40px; }
   * { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- Audio toggle (ambient site bed) ---------- */
+.audio-toggle {
+  width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0; margin-right: 8px;
+  border: 1px solid var(--border); border-radius: 999px;
+  background: var(--surface);
+  color: var(--text); cursor: pointer;
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+.audio-toggle:hover { transform: translateY(-2px); border-color: var(--magenta); background: var(--surface-2); }
+.audio-toggle svg { width: 18px; height: 18px; }
+.audio-toggle .icon-pause { display: none; }
+.audio-toggle[data-on="1"] .icon-play { display: none; }
+.audio-toggle[data-on="1"] .icon-pause { display: inline-block; }
+.audio-toggle[data-on="1"] { border-color: var(--magenta); box-shadow: 0 0 0 1px rgba(255,45,149,.35); }
+
+/* ---------- Discord live count widget ---------- */
+.discord-widget { display: block; font-family: "Space Grotesk", sans-serif; }
+.discord-widget strong { font-weight: 600; letter-spacing: .02em; }
+

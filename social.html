@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tzeke000 Studios — Social</title>
     <meta name="description" content="Connect with Tzeke000 on X, Instagram, YouTube, TikTok and Discord.">
+    <meta name="theme-color" content="#07070d">
     <link rel="icon" type="image/png" href="Tzeke000icon.png">
-    <link rel="apple-touch-icon" href="Tzeke000icon.png">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Tzeke000 Studios">
     <meta property="og:title" content="Tzeke000 — Social">
     <meta property="og:description" content="Connect with Tzeke000 on X, Instagram, YouTube, TikTok and Discord.">
     <meta property="og:url" content="https://tzeke000.github.io/social.html">
-    <meta property="og:image" content="https://tzeke000.github.io/og-banner.png">
+    <meta property="og:image" content="https://tzeke000.github.io/og/og-social.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tzeke000 — Social">
     <meta name="twitter:description" content="Connect with Tzeke000 on X, Instagram, YouTube, TikTok and Discord.">
-    <meta name="twitter:image" content="https://tzeke000.github.io/og-banner.png">
+    <meta name="twitter:image" content="https://tzeke000.github.io/og/og-social.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -28,9 +30,13 @@
 
 <header class="site-header">
     <a class="brand" href="index.html">
-        <img src="Tzeke000icon.png" alt="Tzeke000 logo">
+        <img src="Tzeke000icon.png" alt="Tzeke000 logo" width="34" height="34" decoding="async">
         Tzeke000
     </a>
+        <button class="audio-toggle" data-audio-toggle data-audio-src="/audio/site-loop.mp3" type="button" aria-label="Play site music" aria-pressed="false">
+        <svg class="icon-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        <svg class="icon-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+    </button>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
     </button>
@@ -38,6 +44,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="bio.html">Biography</a></li>
         <li><a href="music.html">Music</a></li>
+        <li><a href="discography.html">Discography</a></li>
         <li><a href="social.html">Social</a></li>
         <li><a href="epk.html">Press</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -97,6 +104,7 @@
 
     <div class="card">
         <h3>Discord</h3>
+        <div class="discord-widget" data-discord-widget="601618775347036180" style="margin:0 0 14px"></div>
         <iframe class="embed-frame" title="Tzeke000 Discord" style="height:400px"
             src="https://discord.com/widget?id=601618775347036180&theme=dark"
             allowtransparency="true"
