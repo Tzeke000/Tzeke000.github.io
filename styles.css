@@ -275,6 +275,24 @@ img { max-width: 100%; display: block; }
   color: #0a0a0f;
 }
 
+/* ---------- Music page quick-listen (QR landing) ---------- */
+.quick-listen { text-align: center; }
+.btn-spotify {
+  width: 100%;
+  max-width: 460px;
+  min-height: 64px;
+  font-size: 1.2rem;
+  background: #1ed760;
+  color: #0a0a0f;
+  box-shadow: 0 8px 28px rgba(30, 215, 96, 0.35);
+}
+.btn-spotify:hover { background: #3be477; color: #0a0a0f; box-shadow: 0 12px 34px rgba(30, 215, 96, 0.45); }
+.quick-listen-more { margin-top: 16px; }
+@media (max-width: 520px) {
+  .quick-listen-more { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .quick-listen-more .btn { padding: 12px 10px; }
+}
+
 /* ---------- Embeds & media ---------- */
 .embed-frame {
   width: 100%;

@@ -1,5 +1,5 @@
 /* Tzeke000 Studios — minimal offline-first service worker */
-const VERSION = "tzeke-v1";
+const VERSION = "tzeke-v2";
 const PRECACHE = [
   "/",
   "/index.html",
@@ -39,14 +39,18 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return; // skip cross-origin
 
-  // HTML: network-first, fall back to cache (and to 404.html offline)
-  if (req.mode === "navigate" || (req.headers.get("accept") || "").includes("text/html")) {
+  // HTML, CSS and JS: network-first so site updates reach returning visitors,
+  // fall back to cache (and to 404.html offline)
+  const isCode = /\.(css|js|json)$/.test(url.pathname);
+  if (isCode || req.mode === "navigate" || (req.headers.get("accept") || "").includes("text/html")) {
     event.respondWith(
       fetch(req).then((res) => {
-        const copy = res.clone();
-        caches.open(VERSION).then((c) => c.put(req, copy));
+        if (res.ok) {
+          const copy = res.clone();
+          caches.open(VERSION).then((c) => c.put(req, copy));
+        }
         return res;
-      }).catch(() => caches.match(req).then((r) => r || caches.match("/404.html")))
+      }).catch(() => caches.match(req).then((r) => r || (isCode ? Response.error() : caches.match("/404.html"))))
     );
     return;
   }
