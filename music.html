@@ -94,7 +94,20 @@
             src="https://embed.music.apple.com/us/artist/tzeke000/1496483739" loading="lazy"></iframe>
     </div>
 
-    <div class="card">
+    <!-- Filled from data/youtube.json (updated every 4 hours by .github/workflows/update-youtube.yml) -->
+    <div class="card" data-yt-latest hidden>
+        <h3>Newest on YouTube</h3>
+        <div class="yt-latest">
+            <div class="yt-slot" data-yt-slot="video">
+                <span class="eyebrow">Newest Video</span>
+            </div>
+            <div class="yt-slot yt-slot-short" data-yt-slot="short">
+                <span class="eyebrow">Newest Short</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" data-yt-fallback>
         <h3>YouTube</h3>
         <iframe class="embed-frame" style="aspect-ratio:16/9"
             title="Tzeke000 on YouTube — latest videos"

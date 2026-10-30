@@ -125,6 +125,38 @@
       .catch(function () { /* widget may be disabled */ });
   }
 
+  /* ---- Newest YouTube video + Short (music page) ---- */
+  var ytCard = document.querySelector("[data-yt-latest]");
+  if (ytCard && "fetch" in window) {
+    fetch("/data/youtube.json", { cache: "no-cache" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (!data || !(data.video || data.short)) return;
+        ["video", "short"].forEach(function (kind) {
+          var slot = ytCard.querySelector('[data-yt-slot="' + kind + '"]');
+          var v = data[kind];
+          if (!slot) return;
+          if (!v || !v.id) { slot.hidden = true; return; }
+          var frame = document.createElement("iframe");
+          frame.className = "embed-frame";
+          frame.src = "https://www.youtube.com/embed/" + encodeURIComponent(v.id);
+          frame.title = v.title || ("Newest " + kind);
+          frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+          frame.referrerPolicy = "strict-origin-when-cross-origin";
+          frame.allowFullscreen = true;
+          frame.loading = "lazy";
+          var caption = document.createElement("p");
+          caption.textContent = v.title || "";
+          slot.appendChild(frame);
+          slot.appendChild(caption);
+        });
+        ytCard.hidden = false;
+        var fallback = document.querySelector("[data-yt-fallback]");
+        if (fallback) fallback.hidden = true;
+      })
+      .catch(function () { /* keep the playlist embed */ });
+  }
+
   /* ---- Listen-now device suggestion ---- */
   var platforms = document.querySelector("[data-listen-platforms]");
   if (platforms) {

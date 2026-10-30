@@ -293,6 +293,21 @@ img { max-width: 100%; display: block; }
   .quick-listen-more .btn { padding: 12px 10px; }
 }
 
+/* ---------- Newest YouTube video + Short ---------- */
+.yt-latest {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.yt-slot .eyebrow { display: block; margin-bottom: 8px; }
+.yt-slot .embed-frame { aspect-ratio: 16 / 9; }
+.yt-slot-short .embed-frame { aspect-ratio: 9 / 16; max-width: 320px; margin: 0 auto; }
+.yt-slot p { margin: 8px 0 0; color: var(--muted); font-size: 0.95rem; }
+@media (max-width: 700px) {
+  .yt-latest { grid-template-columns: 1fr; }
+}
+
 /* ---------- Embeds & media ---------- */
 .embed-frame {
   width: 100%;
