@@ -293,6 +293,10 @@ img { max-width: 100%; display: block; }
   .quick-listen-more .btn { padding: 12px 10px; }
 }
 
+/* ---------- Newest Spotify releases ---------- */
+.spotify-latest { display: grid; gap: 12px; }
+.spotify-latest .embed-frame { height: 152px; }
+
 /* ---------- Newest YouTube video + Short ---------- */
 .yt-latest {
   display: grid;

@@ -1,6 +1,6 @@
 """Write the newest YouTube video and Short to data/youtube.json.
 
-Run by .github/workflows/update-youtube.yml on a schedule. Uses YouTube's
+Run by .github/workflows/update-feeds.yml on a schedule. Uses YouTube's
 public RSS feeds, so no API key is needed. Standard library only.
 """
 import json

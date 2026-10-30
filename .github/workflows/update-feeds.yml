@@ -1,4 +1,4 @@
-name: Update newest YouTube video
+name: Update newest YouTube + Spotify releases
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-youtube
+  group: update-feeds
   cancel-in-progress: false
 
 jobs:
@@ -20,15 +20,22 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python scripts/update_youtube.py
+      - name: YouTube
+        run: python scripts/update_youtube.py
+        continue-on-error: true
+      - name: Spotify
+        run: python scripts/update_spotify.py
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
       - name: Commit if changed
         run: |
-          git add data/youtube.json
+          git add data/
           if git diff --cached --quiet; then
             echo "Nothing new."
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-            git commit -m "Update newest YouTube video"
+            git commit -m "Update newest YouTube + Spotify releases"
             git push
           fi

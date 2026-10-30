@@ -125,6 +125,33 @@
       .catch(function () { /* widget may be disabled */ });
   }
 
+  /* ---- Newest Spotify releases (music page) ---- */
+  var spCard = document.querySelector("[data-spotify-latest]");
+  if (spCard && "fetch" in window) {
+    fetch("/data/spotify.json", { cache: "no-cache" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        var releases = data && data.releases;
+        if (!releases || !releases.length) return;
+        var list = spCard.querySelector("[data-spotify-list]");
+        releases.forEach(function (rel) {
+          if (!rel || !rel.id) return;
+          var frame = document.createElement("iframe");
+          frame.className = "embed-frame";
+          frame.src = "https://open.spotify.com/embed/album/" + encodeURIComponent(rel.id);
+          frame.title = (rel.name || "Release") + " on Spotify";
+          frame.allow = "encrypted-media";
+          frame.loading = "lazy";
+          list.appendChild(frame);
+        });
+        if (!list.children.length) return;
+        spCard.hidden = false;
+        var fallback = document.querySelector("[data-spotify-fallback]");
+        if (fallback) fallback.hidden = true;
+      })
+      .catch(function () { /* keep the hard-coded latest release */ });
+  }
+
   /* ---- Newest YouTube video + Short (music page) ---- */
   var ytCard = document.querySelector("[data-yt-latest]");
   if (ytCard && "fetch" in window) {

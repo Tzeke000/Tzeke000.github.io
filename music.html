@@ -71,7 +71,13 @@
         </div>
     </div>
 
-    <div class="card">
+    <!-- Filled from data/spotify.json (updated every 4 hours by .github/workflows/update-feeds.yml) -->
+    <div class="card" data-spotify-latest hidden>
+        <h3>Newest Releases</h3>
+        <div class="spotify-latest" data-spotify-list></div>
+    </div>
+
+    <div class="card" data-spotify-fallback>
         <h3>Latest Release</h3>
         <iframe class="embed-frame" title="Tzeke000 — latest release on Spotify" style="height:380px"
             src="https://open.spotify.com/embed/album/58b5uz4leKL0sfmOHb9FM9"
@@ -94,7 +100,7 @@
             src="https://embed.music.apple.com/us/artist/tzeke000/1496483739" loading="lazy"></iframe>
     </div>
 
-    <!-- Filled from data/youtube.json (updated every 4 hours by .github/workflows/update-youtube.yml) -->
+    <!-- Filled from data/youtube.json (updated every 4 hours by .github/workflows/update-feeds.yml) -->
     <div class="card" data-yt-latest hidden>
         <h3>Newest on YouTube</h3>
         <div class="yt-latest">
